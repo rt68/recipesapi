@@ -43,6 +43,40 @@ const spoonacularApi = {
         console.error('Error fetching a random recipe from Spoonacular:', error);
         throw error;
       });
+  },
+   /**
+   * Fetches a random food joke.
+   * @returns {Promise<Object>} - Promise resolving to the response with a random food joke.
+   */
+   getRandomFoodJoke: function () {
+    const endpoint = `${API_BASE_URL}/food/jokes/random`;
+    const params = {
+      apiKey: API_KEY
+    };
+
+    return axios.get(endpoint, { params })
+      .then(response => response.data)
+      .catch(error => {
+        console.error('Error fetching a random food joke from Spoonacular:', error);
+        throw error;
+      });
+  },
+   /**
+   * Fetches random food trivia.
+   * @returns {Promise<Object>} - Promise resolving to the response with random food trivia.
+   */
+   getRandomFoodTrivia: function () {
+    const endpoint = `${API_BASE_URL}/food/trivia/random`;
+    const params = {
+      apiKey: API_KEY
+    };
+
+    return axios.get(endpoint, { params })
+      .then(response => response.data)
+      .catch(error => {
+        console.error('Error fetching random food trivia from Spoonacular:', error);
+        throw error;
+      });
   }
 };
 
