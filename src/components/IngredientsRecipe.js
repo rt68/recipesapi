@@ -25,7 +25,9 @@ const IngredientsRecipe = () => {
       />
       <button onClick={handleSearch}>Find Recipes</button>
       {recipes.map(recipe => (
-        <div key={recipe.id}>{recipe.title}</div>
+        <div key={recipe.id}>
+          <h2>{recipe.title}</h2>
+          </div>
       ))}
     </div>
   );

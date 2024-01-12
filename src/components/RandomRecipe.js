@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import spoonacularApi from '../service/spoonacularApi';
 
 const RandomRecipe = () => {
@@ -14,7 +14,11 @@ const RandomRecipe = () => {
         console.error('Failed to fetch a random recipe:', error);
       });
   };
-console.log(recipe);
+  // Fetch a random recipe when the component mounts
+  useEffect(() => {
+    handleGetRandomRecipe();
+  }, []);
+// console.log(recipe);
   return (
     <div>
       <button onClick={handleGetRandomRecipe}>Get Random Recipe</button>
