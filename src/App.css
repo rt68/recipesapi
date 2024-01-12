@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -35,4 +36,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  background-color: '#B19CD9';
+  color: green;
+}
+.sidebar {
+  width: 250px;
+  background-color: #f3f3f3;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  right: 0 ;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 5px 0;
+}
+
+.sidebar input {
+  margin: 5px 0;
+  width: 80%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content {
+  flex-grow: 1;
+  /* Add padding, margins, etc., as needed */
 }

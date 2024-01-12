@@ -6,11 +6,12 @@ export default function Nav () {
         justifyContent: 'space-around',
         listStyle: 'none',
         padding: '10px',
-        backgroundColor: '#333',
+        backgroundColor: '#B19CD9',
         color: 'white',
+        fontWeight: 'bold'
       };
     return(
-        <nav style={{ margin: '0', padding: '1rem 0', backgroundColor: '#4CAF50' }}>
+        <nav style={{ margin: '0', padding: '1rem 0', backgroundColor: '#CDECC9' }}>
         <ul style={navStyle}>
           <li>
             <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>

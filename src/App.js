@@ -1,4 +1,5 @@
 import Nav from './components/Nav';
+import PantrySidebar from './components/PantrySidebar';
 // import RandomRecipe from './components/RandomRecipe';
 // import IngredientsRecipe from './components/IngredientsRecipe';
 import './App.css';
@@ -10,21 +11,20 @@ import About from './pages/About';
 import RecipesPage from './pages/RecipesPage';
 function App() {
   return (
+    <div className="main-container">
     <Router>
       <Nav />
-      <Routes>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipes" element={<RecipesPage />} />
-        {/* Define other routes as needed */}
+
       </Routes>
-    </Router>
-    // <div className="App">
-    //   {/* <Nav /> */}
-    //  <RandomRecipe />
-    //  <IngredientsRecipe />
-    // </div>
-  );
+     </Router>
+     <div className="content"></div>
+     <PantrySidebar />
+    </div>
+  )
 }
 
 export default App;
