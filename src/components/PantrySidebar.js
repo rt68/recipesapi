@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ShoppingList from './ShoppingList';
 
 function PantrySidebar() {
   const [items, setItems] = useState([
@@ -29,7 +30,7 @@ function PantrySidebar() {
         {items.map((item, index) => (
           <li key={index}>
             {item.name} ({item.type})
-            <button onClick={() => deleteItem(index)}>Delete</button>
+            <button onClick={() => deleteItem(index)}>-</button>
           </li>
         ))}
       </ul>
@@ -37,13 +38,14 @@ function PantrySidebar() {
         type="text"
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
-        placeholder="Add New Item"
+        placeholder="Ingredients you have"
       />
       <select value={newItemType} onChange={(e) => setNewItemType(e.target.value)}>
         <option value="Pantry">Pantry</option>
         <option value="Fridge">Fridge</option>
       </select>
       <button onClick={addItem}>Add</button>
+      <ShoppingList />
     </div>
   );
 }

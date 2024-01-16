@@ -21,13 +21,17 @@ function ShoppingList() {
 
     return (
         <div>
-            <input type="text" value={newItem} onChange={handleInputChange} />
+             <h2>Shopping List</h2>
+            <input type="text" 
+            value={newItem} 
+            onChange={handleInputChange}
+            placeholder="Ingredients to buy"/>
             <button onClick={addItem}>Add Item</button>
             <ul>
                 {items.map((item, index) => (
                     <li key={index}>
                         {item}
-                        <button onClick={() => deleteItem(index)}>Delete</button>
+                        <button onClick={() => deleteItem(index)}>-</button>
                     </li>
                 ))}
             </ul>
