@@ -1,12 +1,12 @@
 
-import RandomJoke from "../components/RandomJoke"
-import RandomTrivia from "../components/RandomTrivia"
+// import RandomJoke from "../components/RandomJoke"
+// import RandomTrivia from "../components/RandomTrivia"
 import RandomRecipe from "../components/RandomRecipe"
 export default function Home() {
     return(
         <div>
-           <RandomTrivia />
-            <RandomJoke />
+           {/* <RandomTrivia />
+            <RandomJoke /> */}
             <RandomRecipe />
         </div>
     )

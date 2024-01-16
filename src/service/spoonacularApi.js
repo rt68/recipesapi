@@ -5,17 +5,16 @@ const API_KEY = '3ab238d96a00443f9ffc949e82c6a1fd';
 
 const spoonacularApi = {
    /**
-   * Fetches recipes based on ingredients.
-   * @param {string} ingredients - A list of ingredients (comma-separated).
-   * @returns {Promise<Object>} - Promise resolving to the response with recipes.
+    * @param {string} ingredients - A list of ingredients (comma-separated).
+   * @returns {Promise<Object>} 
    */
    getRecipesByIngredients: function (ingredients) {
     const endpoint = `${API_BASE_URL}/recipes/findByIngredients`;
     const params = {
       ingredients,
       apiKey: API_KEY,
-      number: 10, // Number of results to return (adjust as needed)
-      // Add any other parameters you need
+      number: 10, // Number of results to return 
+      
     };
     return axios.get(endpoint, { params })
     .then(response => response.data)
@@ -27,14 +26,13 @@ const spoonacularApi = {
 
 
   /**
-   * Fetches a random recipe.
-   * @returns {Promise<Object>} - Promise resolving to the response with a random recipe.
+     * @returns {Promise<Object>} 
    */
   getRandomRecipe: function () {
     const endpoint = `${API_BASE_URL}/recipes/random`;
     const params = {
       apiKey: API_KEY,
-      number: 1 // Number of random recipes to return
+      number: 1 
     };
 
     return axios.get(endpoint, { params })
@@ -45,8 +43,7 @@ const spoonacularApi = {
       });
   },
    /**
-   * Fetches a random food joke.
-   * @returns {Promise<Object>} - Promise resolving to the response with a random food joke.
+   * @returns {Promise<Object>} 
    */
    getRandomFoodJoke: function () {
     const endpoint = `${API_BASE_URL}/food/jokes/random`;
@@ -62,8 +59,7 @@ const spoonacularApi = {
       });
   },
    /**
-   * Fetches random food trivia.
-   * @returns {Promise<Object>} - Promise resolving to the response with random food trivia.
+   * @returns {Promise<Object>} 
    */
    getRandomFoodTrivia: function () {
     const endpoint = `${API_BASE_URL}/food/trivia/random`;

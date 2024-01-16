@@ -25,7 +25,7 @@ function ShoppingList() {
             <input type="text" 
             value={newItem} 
             onChange={handleInputChange}
-            placeholder="Ingredients to buy"/>
+            placeholder="Ingredients to Buy"/>
             <button onClick={addItem}>Add Item</button>
             <ul>
                 {items.map((item, index) => (

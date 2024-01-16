@@ -7,14 +7,14 @@ const RandomRecipe = () => {
   const handleGetRandomRecipe = () => {
     spoonacularApi.getRandomRecipe()
       .then(data => {
-        // Assuming the API returns an array of recipes, even if it's just one
+       
         setRecipe(data.recipes[0]);
       })
       .catch(error => {
         console.error('Failed to fetch a random recipe:', error);
       });
   };
-  // Fetch a random recipe when the component mounts
+
   useEffect(() => {
     handleGetRandomRecipe();
   }, []);

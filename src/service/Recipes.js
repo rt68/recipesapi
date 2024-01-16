@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; // if you're using axios
+import axios from 'axios'; 
 
 export default function Recipes() {
     const [recipes, setRecipes] = useState([]);
