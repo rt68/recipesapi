@@ -14,7 +14,7 @@ const IngredientsRecipe = () => {
         console.error('Failed to fetch recipes:', error);
       });
   };
-
+console.log(recipes);
   return (
     <div>
       <input
@@ -28,6 +28,7 @@ const IngredientsRecipe = () => {
         <div key={recipe.id}>
           <h2>{recipe.title}</h2>
           <img src={recipe.image} alt={recipe.title}/>
+          
           </div>
       ))}
     </div>
