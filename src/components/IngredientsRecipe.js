@@ -14,7 +14,7 @@ const IngredientsRecipe = () => {
         console.error('Failed to fetch recipes:', error);
       });
   };
-console.log(recipes);
+// console.log(recipes);
   return (
     <div>
       <input
