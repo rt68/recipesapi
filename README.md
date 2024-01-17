@@ -34,3 +34,6 @@ Service Component - spoonacularApi
 Interacts with the Spoonacular API to fetch recipes, food jokes, and trivia.
 Uses Axios for making HTTP requests to the Spoonacular API.
 
+License
+MIT License
+Copyright (c) 2024 Ran Tu
