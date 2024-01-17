@@ -1,39 +1,41 @@
-Recipes API Website
+# Recipes API Website
 
-Overview
-The Recipes API Website is an engaging culinary platform that offers a comprehensive collection of recipes, food jokes, and trivia, catering to a wide audience of food enthusiasts.
+## Overview
+The Recipes API Website is a dynamic culinary platform designed for food enthusiasts. It features a comprehensive collection of recipes, food jokes, and trivia, offering an engaging user experience.
 
-Features
-Diverse Recipe Collection: Users can explore a broad range of recipes from various cuisines.
-Random Recipe Discovery: The RandomRecipe component provides new recipe ideas randomly.
-Pantry-Based Recipe Suggestions: PantrySidebar suggests recipes based on ingredients in the pantry or fridge.
-Ingredient-Based Recipe Search: IngredientsRecipe allows searching for recipes by specific ingredients.
-Random Food Joke and Trivia: RandomJoke and RandomTrivia components offer humorous jokes and interesting food facts, enhancing user engagement.
-Efficient Pantry Management: PantrySidebar helps in organizing and managing pantry items.
-Shopping List Management: ShoppingList assists users in creating and maintaining their grocery shopping lists.
-Interactive Navigation: The Nav component provides a seamless navigation experience.
+### Features
+- **Diverse Recipe Collection**: Explore a wide range of recipes from various cuisines.
+- **Random Recipe Discovery**: The `RandomRecipe` component provides new culinary ideas randomly.
+- **Pantry-Based Recipe Suggestions**: `PantrySidebar` suggests recipes based on ingredients in your pantry or fridge.
+- **Ingredient-Based Recipe Search**: `IngredientsRecipe` enables searching for recipes by specific ingredients.
+- **Random Food Joke and Trivia**: Enjoy humorous jokes and interesting facts with `RandomJoke` and `RandomTrivia`.
+- **Efficient Pantry Management**: `PantrySidebar` assists in organizing pantry items.
+- **Shopping List Management**: `ShoppingList` helps in creating and maintaining grocery lists.
+- **Interactive Navigation**: Seamless experience with the `Nav` component.
 
-Technologies Used
-React
-React Router
-Axios for API requests
-Spoonacular API for recipes, jokes, and trivia
+### Technologies Used
+- React
+- React Router
+- Axios for API requests
+- Spoonacular API
 
-Setup and Installation
-Clone the repository.
-Install dependencies with npm install or yarn install.
-Run the application using npm start or yarn start.
+## Setup and Installation
+1. Clone the repository: `git clone [repository-link]`
+2. Install dependencies: `npm install` or `yarn install`
+3. Run the application: `npm start` or `yarn start`
 
-Usage
-Navigate through the website using the Nav component.
-Discover new recipes randomly on the Home page and search for recipes based on ingredients on the Recipes page.
-Enjoy random food jokes and trivia.
-Manage pantry items and shopping lists effectively.
+## Usage
+- Navigate using the `Nav` component.
+- Discover and search recipes, manage pantry items, and enjoy food-related jokes and trivia.
 
-Service Component - spoonacularApi
-Interacts with the Spoonacular API to fetch recipes, food jokes, and trivia.
-Uses Axios for making HTTP requests to the Spoonacular API.
+## Live Demo
+[Visit the live demo here](https://rtrecipes.netlify.app/)
 
-License
-MIT License
-Copyright (c) 2024 Ran Tu
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+---
+
+### Service Component - `spoonacularApi`
+Interacts with the Spoonacular API to fetch recipes, food jokes, and trivia, using Axios for HTTP requests.
+
