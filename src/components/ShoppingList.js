@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function ShoppingList() {
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingListItems')) ||[]);
     const [newItem, setNewItem] = useState('');
 
+    useEffect(() => {
+        // Save items to localStorage when they change
+        localStorage.setItem('shoppingListItems', JSON.stringify(items));
+    }, [items]);
+    
     const addItem = () => {
         if (newItem) {
             setItems([...items, newItem]);

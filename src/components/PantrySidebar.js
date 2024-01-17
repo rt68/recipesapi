@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ShoppingList from './ShoppingList';
 import spoonacularApi from '../service/spoonacularApi';
 
 function PantrySidebar() {
-  const [items, setItems] = useState([
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('pantryItems')) ||[
     { name: 'Flour', type: 'Pantry' },
-    { name: 'Sugar', type: 'Pantry' },
     { name: 'Rice', type: 'Pantry' },
     { name: 'Milk', type: 'Fridge' },
-    { name: 'Eggs', type: 'Fridge' },
-    { name: 'Cheese', type: 'Fridge' }
-  ]);
+    { name: 'Eggs', type: 'Fridge' }
+      ]);
+
+      useEffect(() => {
+        // Save items to localStorage when they change
+        localStorage.setItem('pantryItems', JSON.stringify(items));
+      }, [items]);
+      
   const [newItem, setNewItem] = useState('');
   const [newItemType, setNewItemType] = useState('Pantry'); 
 
