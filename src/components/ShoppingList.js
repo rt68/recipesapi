@@ -1,46 +1,46 @@
 import React, { useState, useEffect } from 'react';
 
 function ShoppingList() {
-    const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingListItems')) ||[]);
-    const [newItem, setNewItem] = useState('');
+    const [shoppingItems, setShoppingItems] = useState(JSON.parse(localStorage.getItem('shoppingItems')) || []);
+    const [newShoppingItem, setNewShoppingItem] = useState('');
 
     useEffect(() => {
-        // Save items to localStorage when they change
-        localStorage.setItem('shoppingListItems', JSON.stringify(items));
-    }, [items]);
+    localStorage.setItem('shoppingItems', JSON.stringify(shoppingItems));
+  }, [shoppingItems]);
     
-    const addItem = () => {
-        if (newItem) {
-            setItems([...items, newItem]);
-            setNewItem('');
-        }
-    };
+  const addShoppingItem = (e) => {
+    e.preventDefault();
+    setShoppingItems([...shoppingItems, { name: newShoppingItem }]);
+    setNewShoppingItem('');
+  };
 
-    const handleInputChange = (e) => {
-        setNewItem(e.target.value);
-    };
+  const deleteShoppingItem = (index) => {
+    const newShoppingItems = shoppingItems.filter((_, itemIndex) => index !== itemIndex);
+    setShoppingItems(newShoppingItems);
+  };  
 
-    const deleteItem = (indexToDelete) => {
-        setItems(items.filter((_, index) => index !== indexToDelete));
-    };
-
+    
     return (
-        <div>
-             <h2>Shopping List</h2>
-            <input type="text" 
-            value={newItem} 
-            onChange={handleInputChange}
-            placeholder="Ingredients to Buy"/>
-            <button onClick={addItem}>Add Item</button>
-            <ul>
-                {items.map((item, index) => (
-                    <li key={index}>
-                        {item}
-                        <button onClick={() => deleteItem(index)}>-</button>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <div className="shopping-list">
+        <h2>Shopping List</h2>
+        <ul>
+          {shoppingItems.map((item, index) => (
+            <li key={index}>
+              {item.name}
+              <button onClick={() => deleteShoppingItem(index)}>-</button>
+            </li>
+          ))}
+        </ul>
+        <form onSubmit={addShoppingItem}>
+          <input
+            type="text"
+            value={newShoppingItem}
+            onChange={(e) => setNewShoppingItem(e.target.value)}
+            placeholder="New Shopping Item"
+          />
+          <button type="submit">Add to Shopping List</button>
+        </form>
+      </div>
     );
 }
 export default ShoppingList;

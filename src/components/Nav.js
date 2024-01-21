@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Nav () {
         return(
         <nav className="nav-container">
-          <h2>My Recipes API website</h2>
+          <h1>My Recipes API website</h1>
         <ul className="nav-list">
           <li>
             <Link to="/" >Home</Link>
